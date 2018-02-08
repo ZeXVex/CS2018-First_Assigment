@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cs2018.first_assigment;
+package GUI;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
