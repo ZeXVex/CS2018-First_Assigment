@@ -7,27 +7,18 @@ package GUI;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 
 /**
+ * FXML Controller class
  *
  * @author ZeXVex
  */
-public class MainWindowController implements Initializable {
+public class StudentViewController implements Initializable {
 
-    @FXML
-    private Button button;
-    
-    
-    @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-    }
-    
+    /**
+     * Initializes the controller class.
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
