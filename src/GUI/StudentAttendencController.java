@@ -28,8 +28,7 @@ public class StudentAttendencController implements Initializable {
     private JFXListView<Dates> lstAttendencs;
     @FXML
     private Label presentpers;
-    @FXML
-    private JFXComboBox<String> prensentorabsent;
+    private MenuButton prensentorabsent;
     @FXML
     private Label fname;
     @FXML
@@ -104,13 +103,19 @@ public class StudentAttendencController implements Initializable {
         lstAttendencs.getItems().add(d29);
         lstAttendencs.getItems().add(d30);
         lstAttendencs.getItems().add(d31);
-        prensentorabsent.getItems().setAll("Pressent", "Absent");
+    //    prensentorabsent.getItems().setAll("Pressent", "Absent");
     }
 
-    @FXML
+ /*   @FXML
     private void combobox(MouseEvent event) {
         lstAttendencs.getSelectionModel().getSelectedItem().setPressent(prensentorabsent.getPromptText());
         System.out.println(lstAttendencs.getSelectionModel().getSelectedItem().getPressent());
     }
+
+    @FXML
+    private void prensentorabsent(ActionEvent event) {
+    }*/
+
+
 
 }

@@ -47,7 +47,7 @@ public class MainWindowController implements Initializable {
         if(student1.getPasseword().equals(passeword.getText()) && student1.getUsername().equals(username.getText())) 
         openStudent(student1.getName(), student1.getLname(), student1.getClasses());
         else if(teacher1.getPasseword().equals(passeword.getText()) && teacher1.getUsername().equals(username.getText()))
-        openTeacher(teacher1.getName(), teacher1.getLname(), teacher1.getClasses());
+        openTeacher(teacher1.getName(), teacher1.getLname());
             
         
     }
@@ -67,7 +67,16 @@ public class MainWindowController implements Initializable {
         
     }
 
-    private void openTeacher(String name, String lname, String classes) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    private void openTeacher(String name, String lname) throws IOException {
+        Stage primaryStage = new Stage();
+        primaryStage.initModality(Modality.WINDOW_MODAL);
+        FXMLLoader fxLoader = new FXMLLoader(getClass().getResource("TeacherView.fxml"));
+
+        Parent root = fxLoader.load();
+        TeacherViewController stc = fxLoader.getController();
+        stc.setLabels(name, lname);
+
+        Scene scene = new Scene(root);
+        primaryStage.setScene(scene);
+        primaryStage.show();}
 }
