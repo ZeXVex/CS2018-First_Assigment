@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="235.0" prefWidth="350.0" styleClass="root" stylesheets="@newCascadeStyleSheet.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.MainWindowController">
+<AnchorPane id="AnchorPane" prefHeight="182.0" prefWidth="251.0" styleClass="root" stylesheets="@newCascadeStyleSheet.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.MainWindowController">
     <children>
-        <Button fx:id="button" layoutX="204.0" layoutY="190.0" onAction="#handleButtonAction" text="Login" />
-      <TextField layoutX="101.0" layoutY="87.0" />
-      <TextField layoutX="101.0" layoutY="130.0" />
-      <Label layoutX="22.0" layoutY="91.0" styleClass="root" stylesheets="@newCascadeStyleSheet.css" text="Username" />
-      <Label layoutX="22.0" layoutY="134.0" styleClass="root" stylesheets="@newCascadeStyleSheet.css" text="Passeword" />
+      <JFXTextField fx:id="username" focusColor="#fad200" labelFloat="true" layoutX="59.0" layoutY="34.0" prefHeight="25.0" prefWidth="149.0" promptText="Username" styleClass="textField" stylesheets="@newCascadeStyleSheet.css" unFocusColor="#fad200" />
+      <JFXButton layoutX="144.0" layoutY="136.0" onAction="#loginButton" prefHeight="32.0" prefWidth="64.0" styleClass="buttons" stylesheets="@newCascadeStyleSheet.css" text="Login">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXPasswordField fx:id="passeword" focusColor="#fad200" labelFloat="true" layoutX="59.0" layoutY="77.0" prefHeight="25.0" prefWidth="149.0" promptText="Password" styleClass="textField" stylesheets="@newCascadeStyleSheet.css" unFocusColor="#fad200" />
     </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
 </AnchorPane>

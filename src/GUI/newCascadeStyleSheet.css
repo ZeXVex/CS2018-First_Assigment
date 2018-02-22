@@ -10,14 +10,26 @@ and open the template in the editor.
 
 .root{
     -fx-background-color: #2C2B2A;
-    -fx-text-fill: #4B24E3;
 }
 
 .name{
-    -fx-text-fill: #4B24E3;
+    -fx-text-fill: 4B24E3;
 }
 
 .buttons{
+    -fx-text-fill: #254AFF;
+}
+
+.textField{
     -fx-text-fill: #FAD200;
-    -fx-background-color: #302F2E;
+    -fx-prompt-text-fill:#FAD200;
+}
+
+.absent{
+    -fx-text-fill: #FAD200;
+}
+
+.listView{
+    -fx-text-fill: #FAD200;
+    -fx-background-color: #2C2B2A;
 }
