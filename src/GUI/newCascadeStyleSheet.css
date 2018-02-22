@@ -33,3 +33,8 @@ and open the template in the editor.
     -fx-text-fill: #FAD200;
     -fx-background-color: #2C2B2A;
 }
+
+.combobox{
+    -fx-promp-text-fill: #254AFF;
+    -fx-background-color: #2C2B2A;
+}
