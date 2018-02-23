@@ -44,8 +44,11 @@ public class MainWindowController implements Initializable {
 
     @FXML
     private void loginButton(ActionEvent event) throws IOException {
-        if(student1.getPasseword().equals(passeword.getText()) && student1.getName().equals(username.getText())) 
+        if(student1.getPasseword().equals(passeword.getText()) && student1.getUsername().equals(username.getText())) 
         openStudent(student1.getName(), student1.getLname(), student1.getClasses());
+        else if(teacher1.getPasseword().equals(passeword.getText()) && teacher1.getUsername().equals(username.getText()))
+        openTeacher(teacher1.getName(), teacher1.getLname(), teacher1.getClasses());
+            
         
     }
     
@@ -62,5 +65,9 @@ public class MainWindowController implements Initializable {
         primaryStage.setScene(scene);
         primaryStage.show();
         
+    }
+
+    private void openTeacher(String name, String lname, String classes) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
