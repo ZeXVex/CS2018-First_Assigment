@@ -31,6 +31,13 @@ public class StudentAttendencController implements Initializable {
     private Label presentpers;
     @FXML
     private ComboBox<String> prensentorabsent;
+    private MenuButton prensentorabsent;
+    @FXML
+    private Label fname;
+    @FXML
+    private Label lname;
+    @FXML
+    private Label classes;
 
     /**
      * Initializes the controller class.
@@ -120,10 +127,17 @@ public class StudentAttendencController implements Initializable {
         System.out.println(prensentorabsent.getValue());
         }
         prensentorabsent.getSelectionModel().clearSelection();
+    //    prensentorabsent.getItems().setAll("Pressent", "Absent");
+    }
+
+ /*   @FXML
+    private void combobox(MouseEvent event) {
     }
 
     @FXML
-    private void combobox(MouseEvent event) {
-    }
+    private void prensentorabsent(ActionEvent event) {
+    }*/
+
+
 
 }
