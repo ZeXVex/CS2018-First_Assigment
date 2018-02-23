@@ -13,6 +13,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
 import javafx.scene.input.MouseEvent;
@@ -29,13 +30,7 @@ public class StudentAttendencController implements Initializable {
     @FXML
     private Label presentpers;
     @FXML
-    private JFXComboBox<String> prensentorabsent;
-    @FXML
-    private Label fname;
-    @FXML
-    private Label lname;
-    @FXML
-    private Label classes;
+    private ComboBox<String> prensentorabsent;
 
     /**
      * Initializes the controller class.
@@ -104,13 +99,31 @@ public class StudentAttendencController implements Initializable {
         lstAttendencs.getItems().add(d29);
         lstAttendencs.getItems().add(d30);
         lstAttendencs.getItems().add(d31);
+        prensentorabsent.setPromptText("Set absence");
         prensentorabsent.getItems().setAll("Pressent", "Absent");
+//        prensentorabsent.getItems().setAll("Pressent", "Absent");
+    }
+
+//    @FXML
+//    private void combobox(ActionEvent event) {
+//        lstAttendencs.getSelectionModel().getSelectedItem().setPressent(prensentorabsent.getPromptText());
+//        System.out.println(lstAttendencs.getSelectionModel().getSelectedItem().getPressent());
+//    }
+
+
+    @FXML
+    private void prensentorabsent(ActionEvent event) {
+        if(prensentorabsent.getValue() != null) {
+        Dates selectedDay = lstAttendencs.getSelectionModel().getSelectedItem();
+        selectedDay.setPressent(prensentorabsent.getValue());
+        lstAttendencs.refresh();
+        System.out.println(prensentorabsent.getValue());
+        }
+        prensentorabsent.getSelectionModel().clearSelection();
     }
 
     @FXML
     private void combobox(MouseEvent event) {
-        lstAttendencs.getSelectionModel().getSelectedItem().setPressent(prensentorabsent.getPromptText());
-        System.out.println(lstAttendencs.getSelectionModel().getSelectedItem().getPressent());
     }
 
 }

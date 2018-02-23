@@ -19,7 +19,7 @@ public class CS2018First_Assigment extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("MainWindow.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("StudentAttendenc.fxml"));
         
         Scene scene = new Scene(root);
         
