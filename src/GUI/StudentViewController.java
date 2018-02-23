@@ -9,6 +9,8 @@ import com.jfoenix.controls.JFXButton;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -44,19 +46,21 @@ public class StudentViewController implements Initializable {
     }
 
     @FXML
-    private void btbattend(ActionEvent event) {
+    private void Attend(ActionEvent event) {
     }
 
     @FXML
-    private void btbcheckattends(ActionEvent event) throws IOException {
-        Stage primaryStage = new Stage();
-        primaryStage.initModality(Modality.WINDOW_MODAL);
-        FXMLLoader fxLoader = new FXMLLoader(getClass().getResource("StudentAttendencView.fxml"));
-
-        Parent root = fxLoader.load();
-        StudentViewController stc = fxLoader.getController();
-
-        Scene scene = new Scene(root);
-        primaryStage.setScene(scene);
+    private void attendens(ActionEvent event) {
+        try {
+            FXMLLoader fxLoader = new FXMLLoader(getClass().getResource("StudentAttendencView.fxml"));
+            Parent root = (Parent) fxLoader.load();
+            Stage primaryStage = new Stage();
+            
+            Scene scene = new Scene(root);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        } catch (IOException ex) {
+            System.out.println("Can't load new window");
+        }
     }
 }
