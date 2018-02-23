@@ -40,9 +40,7 @@ public class StudentViewController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        fname.setText("nicolai");
-        lname.setText("work");
-        classes.setText("cs2017B");
+   
     }
 
     @FXML
@@ -62,5 +60,11 @@ public class StudentViewController implements Initializable {
         } catch (IOException ex) {
             System.out.println("Can't load new window");
         }
+    }
+
+    public void setLabels(String name, String lName, String Class) {
+        fname.setText(name);
+        lname.setText(lName);
+        classes.setText(Class);
     }
 }
