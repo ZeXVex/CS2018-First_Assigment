@@ -48,18 +48,18 @@ public class StudentViewController implements Initializable {
     }
 
     @FXML
-    private void attendens(ActionEvent event) {
-        try {
-            FXMLLoader fxLoader = new FXMLLoader(getClass().getResource("StudentAttendencView.fxml"));
-            Parent root = (Parent) fxLoader.load();
+    private void attendens(ActionEvent event) throws IOException {
             Stage primaryStage = new Stage();
-            
+            primaryStage.initModality(Modality.WINDOW_MODAL);
+            FXMLLoader fxLoader = new FXMLLoader(getClass().getResource("StudentAttendanc.fxml"));
+
+            Parent root = fxLoader.load();
+            StudentAttendencController stc = fxLoader.getController();
+           
+
             Scene scene = new Scene(root);
             primaryStage.setScene(scene);
             primaryStage.show();
-        } catch (IOException ex) {
-            System.out.println("Can't load new window");
-        }
     }
 
     public void setLabels(String name, String lName, String Class) {

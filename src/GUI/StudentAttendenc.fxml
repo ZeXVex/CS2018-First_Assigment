@@ -11,15 +11,6 @@
       <Label layoutX="315.0" layoutY="14.0" styleClass="name" text="Absent %:" />
       <Label fx:id="presentpers" layoutX="387.0" layoutY="14.0" styleClass="absent" text="Label" />
       <ComboBox fx:id="prensentorabsent" layoutX="273.0" layoutY="72.0" onAction="#prensentorabsent" prefWidth="150.0" />
-      <JFXListView fx:id="lstAttendencs" layoutX="14.0" layoutY="31.0" styleClass="listView" />
-      <Label layoutX="315.0" layoutY="31.0" styleClass="name" text="Absent %:" />
-      <Label fx:id="presentpers" layoutX="387.0" layoutY="31.0" styleClass="absent" text="Label" />
-      <MenuButton layoutX="302.0" layoutY="107.0" mnemonicParsing="false" onAction="#prensentorabsent" onMouseClicked="#combobox" styleClass="menubuttons" stylesheets="@newCascadeStyleSheet.css" text="MenuButton">
-        <items>
-          <MenuItem mnemonicParsing="false" text="Action 1" />
-          <MenuItem mnemonicParsing="false" text="Action 2" />
-        </items>
-      </MenuButton>
       <Label fx:id="fname" layoutX="14.0" layoutY="14.0" styleClass="name" text="Fname" />
       <Label fx:id="lname" layoutX="73.0" layoutY="14.0" styleClass="name" text="Lname" />
       <Label fx:id="classes" layoutX="138.0" layoutY="14.0" styleClass="name" text="Class" />
