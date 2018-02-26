@@ -120,6 +120,4 @@ public class StudentAttendencController implements Initializable {
         prensentorabsent.getSelectionModel().clearSelection();
    }
 
-
-
 }

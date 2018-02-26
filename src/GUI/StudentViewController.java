@@ -45,16 +45,18 @@ public class StudentViewController implements Initializable {
 
     @FXML
     private void Attend(ActionEvent event) {
+        System.out.println("attended");
     }
 
     @FXML
     private void attendens(ActionEvent event) throws IOException {
             Stage primaryStage = new Stage();
             primaryStage.initModality(Modality.WINDOW_MODAL);
-            FXMLLoader fxLoader = new FXMLLoader(getClass().getResource("StudentAttendanc.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("StudentAttendenc.fxml"));
+          //  FXMLLoader fxLoader = new FXMLLoader(getClass().getResource("StudentAttendanc.fxml"));
 
-            Parent root = fxLoader.load();
-            StudentAttendencController stc = fxLoader.getController();
+//            Parent root = fxLoader.load();
+//            StudentAttendencController stc = fxLoader.getController();
            
 
             Scene scene = new Scene(root);
@@ -66,9 +68,5 @@ public class StudentViewController implements Initializable {
         fname.setText(name);
         lname.setText(lName);
         classes.setText(Class);
-    }
-
-    void setLabels(String name, String lName) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
