@@ -27,6 +27,7 @@ public class StudentAttendenceController implements Initializable {
     
     @FXML
     private Label presentLabel;
+    @FXML
     private ComboBox<String> absenceBox;
     @FXML
     private Label fname;
@@ -36,7 +37,7 @@ public class StudentAttendenceController implements Initializable {
     private Label classes;
     @FXML
     private JFXListView<Dates> lstAttendence;
-    @FXML
+    private String prompt = "Set absence";
 
     /**
      * Initializes the controller class.
@@ -105,16 +106,21 @@ public class StudentAttendenceController implements Initializable {
         lstAttendence.getItems().add(d29);
         lstAttendence.getItems().add(d30);
         lstAttendence.getItems().add(d31);
-        absenceBox.setPromptText("Set absence");
         absenceBox.getItems().setAll("Present", "Absent");
+        absenceBox.setPromptText(prompt);
     }
 
 
     @FXML
     private void chooseAbsence(ActionEvent event) {
+        boolean present;
         if(absenceBox.getValue() != null) {
         Dates selectedDay = lstAttendence.getSelectionModel().getSelectedItem();
-       // selectedDay.setPressent(absenceBox.getValue());
+        if(absenceBox.getValue() == "Present")
+            present = true;
+        else
+            present = false;
+        selectedDay.setPresent(present);
         lstAttendence.refresh();
         System.out.println(absenceBox.getValue());
         }
