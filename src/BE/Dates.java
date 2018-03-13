@@ -6,7 +6,9 @@
 package BE;
 
 import com.jfoenix.controls.JFXComboBox;
+import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
@@ -19,30 +21,30 @@ public class Dates {
 
     @Override
     public String toString() {
-        return "Day:" + Day.getValue() + "\t" + "Month:" + month.getValue() + "\t" + "Year:" + year.getValue() + "\t\t" + Pressent.getValue();
+        return "Day:" + Day.getValue() + "\t" + "Month:" + month.getValue() + "\t" + "Year:" + year.getValue();
     }
 
-    public Dates(int day, int month, int yaers, String Pressent) {
+    public Dates(int day, int month, int years, boolean present) {
         this.Day.set(day);
         this.month.set(month);
-        this.year.set(yaers);
-        this.Pressent.set(Pressent);
+        this.year.set(years);
+        this.present.set(present);
     }
     private final IntegerProperty Day = new SimpleIntegerProperty();
     private final IntegerProperty month = new SimpleIntegerProperty();
     private final IntegerProperty year = new SimpleIntegerProperty();
-    private final StringProperty Pressent = new SimpleStringProperty();
+    private final BooleanProperty present = new SimpleBooleanProperty();
 
-    public String getPressent() {
-        return Pressent.get();
+    public boolean isPresent() {
+        return present.get();
     }
 
-    public void setPressent(String value) {
-        Pressent.set(value);
+    public void setPresent(boolean value) {
+        present.set(value);
     }
 
-    public StringProperty PressentProperty() {
-        return Pressent;
+    public BooleanProperty presentProperty() {
+        return present;
     }
 
     public int getYear() {

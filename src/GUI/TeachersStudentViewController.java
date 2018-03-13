@@ -13,7 +13,7 @@ import javafx.fxml.Initializable;
 
 public class TeachersStudentViewController implements Initializable {
     
-    private JFXListView<Account> lstAttendenc;
+    private JFXListView<Account> lstAttendence;
 
     /**
      * Initializes the controller class.
@@ -24,7 +24,8 @@ public class TeachersStudentViewController implements Initializable {
     }    
 
     public void setAccount(Account selectedAccount) {
-        lstAttendenc.getItems().add(selectedAccount);
+        lstAttendence.getItems().add(selectedAccount);
+        //TODO
         
 }
     

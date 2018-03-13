@@ -28,11 +28,9 @@ import javafx.stage.Stage;
 public class MainWindowController implements Initializable {
 
     @FXML
-    private JFXPasswordField passeword;
+    private JFXPasswordField password;
     @FXML
     private JFXTextField username;
-    @FXML
-    private TextField test;
 
     Account student1 = new Account("student", "12345", "nicolai", "work", "CS2017");
     Account teacher1 = new Account("teacher", "teacher", "Pasqual", "Caudrier", "SEN");
@@ -44,9 +42,9 @@ public class MainWindowController implements Initializable {
 
     @FXML
     private void loginButton(ActionEvent event) throws IOException {
-        if(student1.getPasseword().equals(passeword.getText()) && student1.getUsername().equals(username.getText())) 
+        if(student1.getPasseword().equals(password.getText()) && student1.getUsername().equals(username.getText())) 
         openStudent(student1.getName(), student1.getLname(), student1.getClasses());
-        else if(teacher1.getPasseword().equals(passeword.getText()) && teacher1.getUsername().equals(username.getText()))
+        else if(teacher1.getPasseword().equals(password.getText()) && teacher1.getUsername().equals(username.getText()))
         openTeacher(teacher1.getName(), teacher1.getLname());
             
         

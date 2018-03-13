@@ -47,7 +47,7 @@ public class TeacherViewController implements Initializable {
     }
 
     @FXML
-    private void btnstudentatt(ActionEvent event) throws IOException {
+    private void clickAttendance(ActionEvent event) throws IOException {
         Stage primaryStage = new Stage();
         primaryStage.initModality(Modality.WINDOW_MODAL);
         FXMLLoader fxLoader = new FXMLLoader(getClass().getResource("TeachersStudentView.fxml"));
@@ -62,6 +62,7 @@ public class TeacherViewController implements Initializable {
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.showAndWait();
+        //TODO
     }
 
     public void setLabels(String name, String lName) {

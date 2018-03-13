@@ -6,6 +6,8 @@
 package BE;
 
 import java.util.logging.Logger;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
@@ -15,6 +17,7 @@ import javafx.beans.property.StringProperty;
  */
 public class Account {
     
+    private final IntegerProperty id = new SimpleIntegerProperty();
     private final StringProperty username = new SimpleStringProperty();
     private final StringProperty passeword = new SimpleStringProperty();
     private final StringProperty fname = new SimpleStringProperty();
@@ -36,6 +39,18 @@ public class Account {
         this.fname.set(fname);
         this.lname.set(lname);
         this.classes.set(classes);
+    }
+    
+    public int getId() {
+        return id.get();
+    }
+    
+    public void getId(int value) {
+        id.set(value);
+    }
+    
+    public IntegerProperty idProperty() {
+        return id;
     }
     
     public String getClasses() {

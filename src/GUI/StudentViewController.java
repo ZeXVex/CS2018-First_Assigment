@@ -43,30 +43,27 @@ public class StudentViewController implements Initializable {
    
     }
 
-    @FXML
-    private void Attend(ActionEvent event) {
-        System.out.println("attended");
-    }
-
-    @FXML
-    private void attendens(ActionEvent event) throws IOException {
-            Stage primaryStage = new Stage();
-            primaryStage.initModality(Modality.WINDOW_MODAL);
-            Parent root = FXMLLoader.load(getClass().getResource("StudentAttendenc.fxml"));
-          //  FXMLLoader fxLoader = new FXMLLoader(getClass().getResource("StudentAttendanc.fxml"));
-
-//            Parent root = fxLoader.load();
-//            StudentAttendencController stc = fxLoader.getController();
-           
-
-            Scene scene = new Scene(root);
-            primaryStage.setScene(scene);
-            primaryStage.show();
-    }
 
     public void setLabels(String name, String lName, String Class) {
         fname.setText(name);
         lname.setText(lName);
         classes.setText(Class);
+    }
+
+    @FXML
+    private void clickAttend(ActionEvent event) {
+        System.out.println("attended");
+        //TODO
+    }
+
+    @FXML
+    private void clickAttendence(ActionEvent event) throws IOException {
+            Stage primaryStage = new Stage();
+            primaryStage.initModality(Modality.WINDOW_MODAL);
+            Parent root = FXMLLoader.load(getClass().getResource("StudentAttendence.fxml"));
+
+            Scene scene = new Scene(root);
+            primaryStage.setScene(scene);
+            primaryStage.show();
     }
 }

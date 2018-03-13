@@ -13,7 +13,7 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></JFXButton>
-      <JFXPasswordField fx:id="passeword" focusColor="#fad200" labelFloat="true" layoutX="59.0" layoutY="77.0" prefHeight="25.0" prefWidth="149.0" promptText="Password" styleClass="textField" stylesheets="@newCascadeStyleSheet.css" unFocusColor="#fad200" />
+      <JFXPasswordField fx:id="password" focusColor="#fad200" labelFloat="true" layoutX="59.0" layoutY="77.0" prefHeight="25.0" prefWidth="149.0" promptText="Password" styleClass="textField" stylesheets="@newCascadeStyleSheet.css" unFocusColor="#fad200" />
     </children>
    <cursor>
       <Cursor fx:constant="DEFAULT" />
