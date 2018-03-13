@@ -10,7 +10,6 @@ import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 /**
@@ -21,7 +20,7 @@ public class Dates {
 
     @Override
     public String toString() {
-        return "Day:" + Day.getValue() + "\t" + "Month:" + month.getValue() + "\t" + "Year:" + year.getValue();
+        return "Day:" + Day.getValue() + "\t" + "Month:" + month.getValue() + "\t" + "Year:" + year.getValue() + "Presence:" + getString();
     }
 
     public Dates(int day, int month, int years, boolean present) {
@@ -30,6 +29,7 @@ public class Dates {
         this.year.set(years);
         this.present.set(present);
     }
+    
     private final IntegerProperty Day = new SimpleIntegerProperty();
     private final IntegerProperty month = new SimpleIntegerProperty();
     private final IntegerProperty year = new SimpleIntegerProperty();
@@ -81,6 +81,17 @@ public class Dates {
 
     public IntegerProperty DayProperty() {
         return Day;
+    }
+    
+    public String getString() {
+        String presentString;
+        if(present.getValue() == true)
+            presentString = "Present";
+        else if(present.getValue() == false)
+            presentString = "Absent";
+        else
+            presentString = "What the fuck";
+        return presentString;
     }
 
 }
